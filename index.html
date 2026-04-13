@@ -6,7 +6,7 @@
 <title>社内イントラDX</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=20">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,22 +14,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
-<div class="promo">おすすめプラン：50,000円（人気No.1）</div>
-
-<section class="hero">
-<h1>社内業務を、もっとシンプルに。</h1>
-<p>すべてを一つに集約した次世代イントラ</p>
-<a href="#plans"><button>プランを見る</button></a>
-</section>
-
-<section class="pricing" id="plans">
+<section class="pricing">
 <h2>プラン</h2>
 
 <div class="plans">
 
 <!-- LIGHT -->
-<details class="plan-card">
-<summary>
+<div class="plan" onclick="showFeatures('light')">
 <h3>ライト</h3>
 <h1>30,000円</h1>
 <ul>
@@ -39,21 +30,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <li>通知機能</li>
 </ul>
 <p class="more">もっと見る</p>
-</summary>
-
-<div class="features-below">
-<div class="feature-grid">
-<div><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
-<div><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
-<div><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
-<div><i class="fa-solid fa-bell"></i><p>通知機能</p></div>
 </div>
-</div>
-</details>
 
 <!-- STANDARD -->
-<details class="plan-card recommended" open>
-<summary>
+<div class="plan recommended" onclick="showFeatures('standard')">
 <div class="badge">おすすめ</div>
 <h3>スタンダード</h3>
 <h1>50,000円</h1>
@@ -69,28 +49,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <li>緊急連絡先</li>
 </ul>
 <p class="more">もっと見る</p>
-</summary>
-
-<div class="features-below">
-<div class="feature-grid">
-<div><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
-<div><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
-<div><i class="fa-solid fa-newspaper"></i><p>社内報</p></div>
-<div><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
-<div><i class="fa-solid fa-robot"></i><p>AI日報</p></div>
-<div><i class="fa-solid fa-users"></i><p>メンバー管理</p></div>
 </div>
-</div>
-</details>
 
 </div>
 </section>
 
-<!-- CONTACT BACK -->
+<!-- ✅ FEATURES SECTION (SEPARATE) -->
+<section class="features" id="featuresSection">
+<h2>主な機能</h2>
+
+<div class="feature-grid" id="featureGrid"></div>
+
+</section>
+
+<!-- CONTACT -->
 <section class="contact">
 <h2>お問い合わせ</h2>
 
-<form action="mailto:shiela.concepcion@gbi.co.jp?subject=お問い合わせ" method="POST" enctype="text/plain">
+<form action="mailto:shiela.concepcion@gbi.co.jp" method="POST" enctype="text/plain">
 <input placeholder="会社名" required>
 <input type="email" placeholder="メール" required>
 <textarea placeholder="内容" required></textarea>
@@ -98,6 +74,47 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </form>
 
 </section>
+
+<script>
+function showFeatures(plan){
+
+const grid = document.getElementById("featureGrid");
+const section = document.getElementById("featuresSection");
+
+let features = {
+light: [
+["fa-clock","勤怠管理"],
+["fa-comments","社内チャット"],
+["fa-calendar","カレンダー"],
+["fa-bell","通知機能"]
+],
+standard: [
+["fa-clock","勤怠管理"],
+["fa-comments","社内チャット"],
+["fa-newspaper","社内報"],
+["fa-calendar","カレンダー"],
+["fa-robot","AI日報"],
+["fa-bell","通知機能"],
+["fa-users","メンバー管理"],
+["fa-address-book","連絡先管理"],
+["fa-shield-halved","緊急連絡先"]
+]
+};
+
+grid.innerHTML = "";
+
+features[plan].forEach(f=>{
+grid.innerHTML += `
+<div class="feature-card">
+<i class="fa-solid ${f[0]}"></i>
+<p>${f[1]}</p>
+</div>`;
+});
+
+section.style.display = "block";
+section.scrollIntoView({behavior:"smooth"});
+}
+</script>
 
 </body>
 </html>

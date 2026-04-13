@@ -4,7 +4,12 @@ font-family:'Inter',sans-serif;
 background:#f8fafc;
 }
 
-/* layout */
+/* pricing */
+.pricing{
+padding:80px 20px;
+text-align:center;
+}
+
 .plans{
 display:flex;
 gap:20px;
@@ -13,22 +18,19 @@ flex-wrap:wrap;
 }
 
 /* card */
-.plan-card{
+.plan{
 width:300px;
 background:white;
+padding:25px;
 border-radius:16px;
 border:1px solid #e2e8f0;
-padding:20px;
 cursor:pointer;
+transition:0.25s;
 }
 
-/* keep alignment */
-.plan-card summary{
-list-style:none;
-}
-
-summary::-webkit-details-marker{
-display:none;
+.plan:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* recommended */
@@ -36,38 +38,88 @@ display:none;
 border:2px solid #2b6cb0;
 }
 
+/* badge */
+.badge{
+background:#38bdf8;
+color:white;
+padding:5px 12px;
+border-radius:999px;
+font-size:12px;
+display:inline-block;
+margin-bottom:10px;
+}
+
+/* list */
+.plan ul{
+list-style:none;
+padding:0;
+line-height:1.8;
+}
+
 /* more */
 .more{
 color:#2b6cb0;
 font-weight:600;
+margin-top:10px;
 }
 
-/* FEATURES BELOW */
-.features-below{
-margin-top:20px;
+/* FEATURES SECTION */
+.features{
+display:none;
+padding:80px 20px;
+text-align:center;
 }
 
 /* grid */
 .feature-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+margin-top:30px;
 }
 
-.feature-grid div{
-text-align:center;
-background:#f1f5f9;
-padding:10px;
-border-radius:10px;
+/* feature card */
+.feature-card{
+background:white;
+padding:25px;
+border-radius:16px;
+border:1px solid #e2e8f0;
+transition:0.25s;
 }
 
-.feature-grid i{
+.feature-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-card i{
+font-size:26px;
 color:#2b6cb0;
-font-size:20px;
+margin-bottom:10px;
 }
 
 /* contact */
 .contact{
 padding:80px 20px;
 text-align:center;
+}
+
+input,textarea{
+display:block;
+width:260px;
+margin:10px auto;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+padding:10px 20px;
+border:none;
+background:#2b6cb0;
+color:white;
+border-radius:6px;
+cursor:pointer;
 }
