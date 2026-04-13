@@ -1,184 +1,107 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>社内イントラDX</title>
 
-<title>社内イントラDX - Minimal</title>
-
-<link rel="stylesheet" href="style2.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=12">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
-
 
 <body>
 
-
-<!-- NAV -->
-
-<header class="nav">
-
-<h3>Intranet DX</h3>
-
-<button>お問い合わせ</button>
-
-</header>
-
-
-
-<!-- HERO -->
+<div class="promo">おすすめプラン：50,000円（人気No.1）</div>
 
 <section class="hero">
-
-<h1>
-
-社内業務をシンプルに
-
-</h1>
-
-<p>
-
-必要な情報を1つにまとめて
-業務効率を向上
-
-</p>
-
-<button>
-
-無料で相談する
-
-</button>
-
+<h1>社内業務を、もっとシンプルに。</h1>
+<p>すべてを一つに集約した次世代イントラ</p>
+<a href="#plans"><button>プランを見る</button></a>
 </section>
 
-
-
-<!-- FEATURES -->
-
-<section class="features">
-
-<h2>主な機能</h2>
-
-<div class="grid">
-
-
-<div class="card">
-<i class="fa-solid fa-clock"></i>
-<p>勤怠管理</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-comments"></i>
-<p>チャット</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-calendar"></i>
-<p>カレンダー</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-robot"></i>
-<p>AI日報</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-bell"></i>
-<p>通知</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-users"></i>
-<p>メンバー管理</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- OPTION -->
-
-<section class="options">
-
-<h2>オプションサービス</h2>
-
-<div class="option-list">
-
-<p>・Excel / Word ワンポイント講座</p>
-
-<p>・Wi-Fi環境改善サポート</p>
-
-</div>
-
-</section>
-
-
-
-<!-- PRICING -->
-
-<section class="pricing">
-
-<h2>料金プラン</h2>
+<section class="pricing" id="plans">
+<h2>プラン</h2>
 
 <div class="plans">
 
-
+<!-- LIGHT -->
 <div class="plan">
-
 <h3>ライト</h3>
 <h1>30,000円</h1>
 
+<ul>
+<li>勤怠管理</li>
+<li>社内チャット</li>
+<li>カレンダー</li>
+<li>通知機能</li>
+</ul>
+
+<details>
+<summary>もっと見る</summary>
+
+<div class="feature-expand">
+<div class="feature-grid">
+
+<div class="feature-card"><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
+<div class="feature-card"><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
+<div class="feature-card"><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
+<div class="feature-card"><i class="fa-solid fa-bell"></i><p>通知機能</p></div>
+
+</div>
 </div>
 
+</details>
 
+</div>
+
+<!-- STANDARD -->
 <div class="plan recommended">
-
-<p class="badge">おすすめ</p>
+<div class="badge">おすすめ</div>
 
 <h3>スタンダード</h3>
 <h1>50,000円</h1>
 
-<p>全機能対応</p>
+<ul>
+<li>勤怠管理</li>
+<li>社内チャット</li>
+<li>社内報</li>
+<li>カレンダー</li>
+<li>AI日報</li>
+<li>通知機能</li>
+<li>メンバー管理</li>
+<li>連絡先管理</li>
+<li>緊急連絡先</li>
+</ul>
+
+<details open>
+<summary>もっと見る</summary>
+
+<div class="feature-expand">
+<div class="feature-grid">
+
+<div class="feature-card"><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
+<div class="feature-card"><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
+<div class="feature-card"><i class="fa-solid fa-newspaper"></i><p>社内報</p></div>
+<div class="feature-card"><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
+<div class="feature-card"><i class="fa-solid fa-robot"></i><p>AI日報</p></div>
+
+<div class="feature-card"><i class="fa-solid fa-bell"></i><p>通知機能</p></div>
+<div class="feature-card"><i class="fa-solid fa-users"></i><p>メンバー管理</p></div>
+<div class="feature-card"><i class="fa-solid fa-address-book"></i><p>連絡先管理</p></div>
+<div class="feature-card"><i class="fa-solid fa-shield-halved"></i><p>緊急連絡先</p></div>
+
+</div>
+</div>
+
+</details>
 
 </div>
 
-
 </div>
-
 </section>
-
-
-
-<!-- CONTACT -->
-
-<section class="contact">
-
-<h2>お問い合わせ</h2>
-
-<input placeholder="会社名">
-<input placeholder="メール">
-<textarea placeholder="内容"></textarea>
-
-<button>送信</button>
-
-</section>
-
-
-
-<footer>
-
-© 2026 Intranet DX
-
-</footer>
-
 
 </body>
-
 </html>
