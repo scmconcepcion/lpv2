@@ -6,7 +6,7 @@
 <title>社内イントラDX</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="style.css?v=14">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,65 +14,49 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
-<!-- PROMO -->
 <div class="promo">おすすめプラン：50,000円（人気No.1）</div>
 
-<!-- HERO -->
 <section class="hero">
 <h1>社内業務を、もっとシンプルに。</h1>
-<p>勤怠・チャット・日報・顧客管理まで、すべてを一つに。</p>
+<p>すべてを一つに集約した次世代イントラ</p>
 <a href="#plans"><button>プランを見る</button></a>
 </section>
 
-<!-- PRICING -->
 <section class="pricing" id="plans">
 <h2>プラン</h2>
 
 <div class="plans">
 
 <!-- LIGHT -->
-<details class="plan-wrap">
-
+<details class="plan-card">
 <summary>
-<div class="plan">
 <h3>ライト</h3>
 <h1>30,000円</h1>
-
 <ul>
 <li>勤怠管理</li>
 <li>社内チャット</li>
 <li>カレンダー</li>
 <li>通知機能</li>
 </ul>
-
 <p class="more">もっと見る</p>
-</div>
 </summary>
 
-<div class="feature-expand">
+<div class="features-below">
 <div class="feature-grid">
-
-<div class="feature-card"><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
-<div class="feature-card"><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
-<div class="feature-card"><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
-<div class="feature-card"><i class="fa-solid fa-bell"></i><p>通知機能</p></div>
-
+<div><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
+<div><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
+<div><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
+<div><i class="fa-solid fa-bell"></i><p>通知機能</p></div>
 </div>
 </div>
-
 </details>
 
 <!-- STANDARD -->
-<details class="plan-wrap" open>
-
+<details class="plan-card recommended" open>
 <summary>
-<div class="plan recommended">
-
 <div class="badge">おすすめ</div>
-
 <h3>スタンダード</h3>
 <h1>50,000円</h1>
-
 <ul>
 <li>勤怠管理</li>
 <li>社内チャット</li>
@@ -84,32 +68,35 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <li>連絡先管理</li>
 <li>緊急連絡先</li>
 </ul>
-
 <p class="more">もっと見る</p>
-
-</div>
 </summary>
 
-<div class="feature-expand">
+<div class="features-below">
 <div class="feature-grid">
-
-<div class="feature-card"><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
-<div class="feature-card"><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
-<div class="feature-card"><i class="fa-solid fa-newspaper"></i><p>社内報</p></div>
-<div class="feature-card"><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
-<div class="feature-card"><i class="fa-solid fa-robot"></i><p>AI日報</p></div>
-
-<div class="feature-card"><i class="fa-solid fa-bell"></i><p>通知機能</p></div>
-<div class="feature-card"><i class="fa-solid fa-users"></i><p>メンバー管理</p></div>
-<div class="feature-card"><i class="fa-solid fa-address-book"></i><p>連絡先管理</p></div>
-<div class="feature-card"><i class="fa-solid fa-shield-halved"></i><p>緊急連絡先</p></div>
-
+<div><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
+<div><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
+<div><i class="fa-solid fa-newspaper"></i><p>社内報</p></div>
+<div><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
+<div><i class="fa-solid fa-robot"></i><p>AI日報</p></div>
+<div><i class="fa-solid fa-users"></i><p>メンバー管理</p></div>
 </div>
 </div>
-
 </details>
 
 </div>
+</section>
+
+<!-- CONTACT BACK -->
+<section class="contact">
+<h2>お問い合わせ</h2>
+
+<form action="mailto:shiela.concepcion@gbi.co.jp?subject=お問い合わせ" method="POST" enctype="text/plain">
+<input placeholder="会社名" required>
+<input type="email" placeholder="メール" required>
+<textarea placeholder="内容" required></textarea>
+<button>送信</button>
+</form>
+
 </section>
 
 </body>
