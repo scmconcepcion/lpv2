@@ -4,45 +4,37 @@ margin:0;
 
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI";
 
-background:white;
+background:#f8fafc;
 
-color:#222;
-
-}
-
-
-/* nav */
-
-.nav{
-
-display:flex;
-
-justify-content:space-between;
-
-padding:20px 40px;
-
-border-bottom:1px solid #eee;
+color:#1e293b;
 
 }
 
-.nav button{
+
+
+/* promo */
+
+.promo{
 
 background:#2563eb;
 
 color:white;
 
-border:none;
+text-align:center;
 
-padding:8px 15px;
+padding:12px;
 
-border-radius:6px;
+font-weight:bold;
 
 }
+
 
 
 /* hero */
 
 .hero{
+
+background:white;
 
 text-align:center;
 
@@ -52,15 +44,15 @@ padding:120px 20px;
 
 .hero h1{
 
-font-size:42px;
+font-size:46px;
 
 }
 
 .hero p{
 
-color:#666;
+color:#64748b;
 
-margin:15px 0;
+margin-top:15px;
 
 }
 
@@ -68,22 +60,29 @@ margin:15px 0;
 
 background:#2563eb;
 
-color:white;
-
 border:none;
 
-padding:12px 24px;
+padding:14px 28px;
 
 border-radius:8px;
 
+color:white;
+
+font-size:16px;
+
+margin-top:25px;
+
+cursor:pointer;
+
 }
+
 
 
 /* features */
 
 .features{
 
-padding:80px 20px;
+padding:100px 20px;
 
 text-align:center;
 
@@ -93,11 +92,11 @@ text-align:center;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-gap:20px;
+gap:25px;
 
-max-width:700px;
+max-width:1000px;
 
 margin:auto;
 
@@ -107,17 +106,19 @@ margin-top:40px;
 
 .card{
 
-border:1px solid #eee;
+background:white;
 
-padding:25px;
+padding:30px;
 
-border-radius:10px;
+border-radius:12px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.05);
 
 }
 
 .card i{
 
-font-size:20px;
+font-size:24px;
 
 margin-bottom:10px;
 
@@ -127,23 +128,67 @@ color:#2563eb;
 
 
 
+/* benefit */
+
+.benefit{
+
+text-align:center;
+
+padding:100px 20px;
+
+background:#eef2ff;
+
+}
+
+
+
 /* options */
 
 .options{
 
-background:#f9fafb;
-
-padding:80px 20px;
+padding:100px 20px;
 
 text-align:center;
 
+background:white;
+
 }
 
-.option-list p{
+.option-grid{
 
-margin:10px 0;
+display:flex;
 
-color:#555;
+gap:30px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.option-card{
+
+background:#f8fafc;
+
+padding:35px;
+
+border-radius:12px;
+
+width:260px;
+
+border:1px solid #e2e8f0;
+
+}
+
+.option-card i{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+color:#2563eb;
 
 }
 
@@ -153,9 +198,11 @@ color:#555;
 
 .pricing{
 
-padding:80px 20px;
+padding:100px 20px;
 
 text-align:center;
+
+background:#eef2ff;
 
 }
 
@@ -163,37 +210,75 @@ text-align:center;
 
 display:flex;
 
-gap:20px;
+gap:30px;
 
 justify-content:center;
 
-margin-top:40px;
-
 flex-wrap:wrap;
+
+margin-top:40px;
 
 }
 
 .plan{
 
-border:1px solid #ddd;
+background:white;
 
-padding:30px;
+padding:35px;
 
-border-radius:10px;
+border-radius:12px;
 
-width:200px;
+width:230px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.plan button{
+
+margin-top:15px;
+
+padding:12px;
+
+width:100%;
+
+border:none;
+
+border-radius:8px;
+
+background:#2563eb;
+
+color:white;
 
 }
 
 .recommended{
 
+transform:scale(1.05);
+
 border:2px solid #2563eb;
+
+position:relative;
 
 }
 
 .badge{
 
-color:#2563eb;
+position:absolute;
+
+top:-12px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+background:#2563eb;
+
+color:white;
+
+padding:5px 12px;
+
+border-radius:20px;
 
 font-size:12px;
 
@@ -205,9 +290,11 @@ font-size:12px;
 
 .contact{
 
-padding:80px 20px;
+padding:100px 20px;
 
 text-align:center;
+
+background:white;
 
 }
 
@@ -215,21 +302,21 @@ input,textarea{
 
 display:block;
 
-width:280px;
+width:300px;
 
 margin:10px auto;
 
-padding:12px;
+padding:14px;
 
-border:1px solid #ddd;
+border-radius:8px;
 
-border-radius:6px;
+border:1px solid #e2e8f0;
 
 }
 
 textarea{
 
-height:100px;
+height:120px;
 
 }
 
@@ -237,24 +324,26 @@ height:100px;
 
 background:#2563eb;
 
-color:white;
-
 border:none;
 
-padding:12px 20px;
+padding:14px 25px;
 
-border-radius:6px;
+border-radius:8px;
+
+color:white;
 
 }
 
 
 
+/* footer */
+
 footer{
 
 text-align:center;
 
-padding:30px;
+padding:40px;
 
-color:#888;
+color:#64748b;
 
 }
