@@ -6,7 +6,7 @@
 <title>社内イントラDX</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20">
+<link rel="stylesheet" href="style.css?v=21">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,12 +14,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
-<section class="pricing">
+<!-- 🔵 TOP PROMO -->
+<div class="promo">おすすめプラン：50,000円（人気No.1）</div>
+
+<!-- 🔵 HERO -->
+<section class="hero">
+<h1>社内業務を、もっとシンプルに。</h1>
+<p>勤怠・チャット・日報・顧客管理まで、すべてを一つに。</p>
+<a href="#plans"><button>プランを見る</button></a>
+</section>
+
+<!-- 🔵 PRICING -->
+<section class="pricing" id="plans">
 <h2>プラン</h2>
 
 <div class="plans">
 
-<!-- LIGHT -->
 <div class="plan" onclick="showFeatures('light')">
 <h3>ライト</h3>
 <h1>30,000円</h1>
@@ -32,7 +42,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <p class="more">もっと見る</p>
 </div>
 
-<!-- STANDARD -->
 <div class="plan recommended" onclick="showFeatures('standard')">
 <div class="badge">おすすめ</div>
 <h3>スタンダード</h3>
@@ -54,15 +63,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </div>
 </section>
 
-<!-- ✅ FEATURES SECTION (SEPARATE) -->
+<!-- 🔵 FEATURES (SEPARATE) -->
 <section class="features" id="featuresSection">
 <h2>主な機能</h2>
-
 <div class="feature-grid" id="featureGrid"></div>
-
 </section>
 
-<!-- CONTACT -->
+<!-- 🔵 CONTACT -->
 <section class="contact">
 <h2>お問い合わせ</h2>
 
@@ -75,6 +82,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </section>
 
+<!-- 🔵 SCRIPT -->
 <script>
 function showFeatures(plan){
 

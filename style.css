@@ -1,125 +1,233 @@
-body{
+/* RESET */
+*{
 margin:0;
-font-family:'Inter',sans-serif;
-background:#f8fafc;
+padding:0;
+box-sizing:border-box;
 }
 
-/* pricing */
-.pricing{
+/* VARIABLES */
+:root{
+--bg:#f8fafc;
+--card:#ffffff;
+--primary:#2b6cb0;
+--primary-dark:#1e3a5f;
+--accent:#38bdf8;
+--text:#1e293b;
+--sub:#64748b;
+--border:#e2e8f0;
+}
+
+/* BODY */
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+
+/* PROMO */
+.promo{
+background:var(--primary-dark);
+color:white;
+text-align:center;
+padding:12px;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:140px 20px;
+background:linear-gradient(135deg,#2b6cb0,#4fd1c5);
+color:white;
+}
+
+.hero h1{
+font-size:42px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero p{
+opacity:0.9;
+}
+
+.hero button{
+margin-top:25px;
+padding:14px 32px;
+border:none;
+border-radius:999px;
+background:white;
+color:var(--primary-dark);
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* SECTION */
+section{
 padding:80px 20px;
 text-align:center;
 }
 
-.plans{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+h2{
+font-size:28px;
+margin-bottom:20px;
 }
 
-/* card */
+/* PRICING */
+.plans{
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+/* CARD */
 .plan{
 width:300px;
-background:white;
-padding:25px;
-border-radius:16px;
-border:1px solid #e2e8f0;
+background:var(--card);
+padding:28px;
+border-radius:18px;
+border:1px solid var(--border);
 cursor:pointer;
-transition:0.25s;
+transition:0.3s;
 }
 
 .plan:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transform:translateY(-6px);
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* recommended */
+/* RECOMMENDED */
 .recommended{
-border:2px solid #2b6cb0;
+border:2px solid var(--primary);
+transform:scale(1.03);
 }
 
-/* badge */
+/* BADGE */
 .badge{
-background:#38bdf8;
+background:var(--accent);
 color:white;
-padding:5px 12px;
+padding:6px 14px;
 border-radius:999px;
 font-size:12px;
 display:inline-block;
-margin-bottom:10px;
+margin-bottom:12px;
+font-weight:600;
 }
 
-/* list */
+/* PRICE TEXT */
+.plan h1{
+font-size:32px;
+margin:10px 0;
+}
+
+/* LIST */
 .plan ul{
 list-style:none;
-padding:0;
+margin-top:10px;
 line-height:1.8;
+color:var(--sub);
 }
 
-/* more */
+/* MORE */
 .more{
-color:#2b6cb0;
+margin-top:12px;
+color:var(--primary);
 font-weight:600;
-margin-top:10px;
 }
 
 /* FEATURES SECTION */
 .features{
 display:none;
-padding:80px 20px;
-text-align:center;
+padding:90px 20px;
+background:#f1f5f9;
 }
 
-/* grid */
 .feature-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-max-width:1000px;
+gap:25px;
+max-width:1100px;
 margin:auto;
 margin-top:30px;
 }
 
-/* feature card */
+/* FEATURE CARD */
 .feature-card{
 background:white;
-padding:25px;
-border-radius:16px;
-border:1px solid #e2e8f0;
-transition:0.25s;
+padding:30px;
+border-radius:18px;
+border:1px solid var(--border);
+transition:0.3s;
 }
 
 .feature-card:hover{
 transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
 
+/* ICON */
 .feature-card i{
-font-size:26px;
-color:#2b6cb0;
-margin-bottom:10px;
+font-size:28px;
+color:var(--primary);
+margin-bottom:12px;
 }
 
-/* contact */
+/* CONTACT */
 .contact{
-padding:80px 20px;
-text-align:center;
+background:white;
 }
 
-input,textarea{
+.contact input,
+.contact textarea{
 display:block;
-width:260px;
+width:280px;
 margin:10px auto;
-padding:10px;
-border-radius:6px;
-border:1px solid #ccc;
+padding:12px;
+border-radius:8px;
+border:1px solid var(--border);
+font-family:inherit;
 }
 
-button{
-padding:10px 20px;
+.contact textarea{
+height:100px;
+resize:none;
+}
+
+.contact button{
+margin-top:10px;
+padding:12px 24px;
 border:none;
-background:#2b6cb0;
+background:var(--primary);
 color:white;
-border-radius:6px;
+border-radius:8px;
 cursor:pointer;
+transition:0.3s;
+}
+
+.contact button:hover{
+background:var(--primary-dark);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.hero h1{
+font-size:30px;
+}
+
+.plan{
+width:100%;
+max-width:350px;
+}
+
 }
