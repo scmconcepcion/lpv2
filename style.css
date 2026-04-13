@@ -1,41 +1,25 @@
-/* RESET */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-/* VARIABLES */
-:root{
---bg:#f8fafc;
---card:#ffffff;
---primary:#2b6cb0;
---primary-dark:#1e3a5f;
---accent:#38bdf8;
---text:#1e293b;
---sub:#64748b;
---border:#e2e8f0;
-}
-
-/* BODY */
 body{
 font-family:'Inter',sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.6;
+background:#f8fafc;
+color:#1e293b;
 }
 
-/* PROMO */
+/* promo */
 .promo{
-background:var(--primary-dark);
+background:#1e3a5f;
 color:white;
 text-align:center;
 padding:12px;
 font-weight:600;
-letter-spacing:0.5px;
 }
 
-/* HERO */
+/* hero */
 .hero{
 text-align:center;
 padding:140px 20px;
@@ -45,189 +29,150 @@ color:white;
 
 .hero h1{
 font-size:42px;
-font-weight:700;
 margin-bottom:10px;
 }
 
-.hero p{
-opacity:0.9;
-}
-
 .hero button{
-margin-top:25px;
-padding:14px 32px;
+margin-top:20px;
+padding:12px 28px;
 border:none;
 border-radius:999px;
 background:white;
-color:var(--primary-dark);
-font-weight:600;
+color:#1e3a5f;
 cursor:pointer;
-transition:0.3s;
 }
 
-.hero button:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* SECTION */
+/* sections */
 section{
 padding:80px 20px;
 text-align:center;
 }
 
 h2{
-font-size:28px;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
-/* PRICING */
-.plans{
+/* product/value */
+.product,.options{
+background:white;
+}
+
+.value{
+background:#f1f5f9;
+}
+
+/* options */
+.option-grid{
 display:flex;
-gap:25px;
+gap:20px;
 justify-content:center;
 flex-wrap:wrap;
-margin-top:30px;
+margin-top:20px;
 }
 
-/* CARD */
+.option-card{
+width:300px;
+padding:25px;
+background:#f8fafc;
+border-radius:16px;
+border:1px solid #e2e8f0;
+}
+
+/* pricing */
+.plans{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
 .plan{
 width:300px;
-background:var(--card);
-padding:28px;
-border-radius:18px;
-border:1px solid var(--border);
+background:white;
+padding:25px;
+border-radius:16px;
+border:1px solid #e2e8f0;
 cursor:pointer;
-transition:0.3s;
+transition:.25s;
 }
 
 .plan:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 30px rgba(0,0,0,0.08);
+transform:translateY(-5px);
 }
 
-/* RECOMMENDED */
+.plan.active{
+border:2px solid #2b6cb0;
+}
+
 .recommended{
-border:2px solid var(--primary);
-transform:scale(1.03);
+border:2px solid #2b6cb0;
 }
 
-/* BADGE */
 .badge{
-background:var(--accent);
+background:#38bdf8;
 color:white;
-padding:6px 14px;
+padding:5px 12px;
 border-radius:999px;
 font-size:12px;
 display:inline-block;
-margin-bottom:12px;
-font-weight:600;
+margin-bottom:10px;
 }
 
-/* PRICE TEXT */
-.plan h1{
-font-size:32px;
-margin:10px 0;
-}
-
-/* LIST */
 .plan ul{
 list-style:none;
-margin-top:10px;
 line-height:1.8;
-color:var(--sub);
+color:#64748b;
 }
 
-/* MORE */
 .more{
-margin-top:12px;
-color:var(--primary);
+margin-top:10px;
+color:#2b6cb0;
 font-weight:600;
 }
 
-/* FEATURES SECTION */
+/* features */
 .features{
 display:none;
-padding:90px 20px;
 background:#f1f5f9;
 }
 
 .feature-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:25px;
-max-width:1100px;
+gap:20px;
+max-width:1000px;
 margin:auto;
 margin-top:30px;
 }
 
-/* FEATURE CARD */
 .feature-card{
 background:white;
-padding:30px;
-border-radius:18px;
-border:1px solid var(--border);
-transition:0.3s;
+padding:25px;
+border-radius:16px;
+border:1px solid #e2e8f0;
 }
 
-.feature-card:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 30px rgba(0,0,0,0.08);
-}
-
-/* ICON */
 .feature-card i{
-font-size:28px;
-color:var(--primary);
-margin-bottom:12px;
+font-size:24px;
+color:#2b6cb0;
+margin-bottom:10px;
 }
 
-/* CONTACT */
-.contact{
-background:white;
-}
-
+/* contact */
 .contact input,
 .contact textarea{
 display:block;
-width:280px;
+width:260px;
 margin:10px auto;
-padding:12px;
-border-radius:8px;
-border:1px solid var(--border);
-font-family:inherit;
-}
-
-.contact textarea{
-height:100px;
-resize:none;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
 }
 
 .contact button{
-margin-top:10px;
-padding:12px 24px;
+padding:10px 20px;
 border:none;
-background:var(--primary);
+background:#2b6cb0;
 color:white;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.contact button:hover{
-background:var(--primary-dark);
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-.hero h1{
-font-size:30px;
-}
-
-.plan{
-width:100%;
-max-width:350px;
-}
-
+border-radius:6px;
 }
