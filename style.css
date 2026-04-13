@@ -34,6 +34,16 @@ color:white;
 font-size:42px;
 }
 
+.hero button{
+margin-top:20px;
+padding:12px 28px;
+border:none;
+border-radius:999px;
+background:white;
+color:#1e3a5f;
+cursor:pointer;
+}
+
 /* pricing */
 .pricing{
 padding:80px 20px;
@@ -41,10 +51,14 @@ text-align:center;
 }
 
 .plans{
-display:flex;
-gap:30px;
-justify-content:center;
-flex-wrap:wrap;
+max-width:900px;
+margin:auto;
+}
+
+/* spacing */
+.plan-wrap{
+display:block;
+margin-bottom:40px;
 }
 
 /* card */
@@ -52,8 +66,9 @@ flex-wrap:wrap;
 background:var(--card);
 padding:30px;
 border-radius:20px;
-width:320px;
 border:1px solid #e2e8f0;
+max-width:400px;
+margin:auto;
 }
 
 /* recommended */
@@ -79,24 +94,24 @@ padding:0;
 line-height:1.8;
 }
 
-/* details */
+/* remove default arrow */
 summary{
+list-style:none;
 cursor:pointer;
+}
+
+summary::-webkit-details-marker{
+display:none;
+}
+
+/* more text */
+.more{
+margin-top:10px;
 color:var(--primary);
 font-weight:600;
-margin-top:10px;
-list-style:none;
 }
 
-summary::after{
-content:" ▼";
-}
-
-details[open] summary::after{
-content:" ▲";
-}
-
-/* feature section */
+/* feature area */
 .feature-expand{
 margin-top:20px;
 }
@@ -104,21 +119,23 @@ margin-top:20px;
 /* grid */
 .feature-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+max-width:800px;
+margin:auto;
 }
 
-/* card */
+/* feature card */
 .feature-card{
 background:#f1f5f9;
-padding:15px;
-border-radius:12px;
+padding:20px;
+border-radius:14px;
 text-align:center;
 border:1px solid #e2e8f0;
 }
 
 .feature-card i{
-font-size:22px;
+font-size:24px;
 color:var(--primary);
-margin-bottom:8px;
+margin-bottom:10px;
 }

@@ -6,7 +6,7 @@
 <title>社内イントラDX</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=12">
+<link rel="stylesheet" href="style.css?v=13">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,20 +14,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
+<!-- PROMO -->
 <div class="promo">おすすめプラン：50,000円（人気No.1）</div>
 
+<!-- HERO -->
 <section class="hero">
 <h1>社内業務を、もっとシンプルに。</h1>
-<p>すべてを一つに集約した次世代イントラ</p>
+<p>勤怠・チャット・日報・顧客管理まで、すべてを一つに。</p>
 <a href="#plans"><button>プランを見る</button></a>
 </section>
 
+<!-- PRICING -->
 <section class="pricing" id="plans">
 <h2>プラン</h2>
 
 <div class="plans">
 
 <!-- LIGHT -->
+<details class="plan-wrap">
+
+<summary>
 <div class="plan">
 <h3>ライト</h3>
 <h1>30,000円</h1>
@@ -39,8 +45,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <li>通知機能</li>
 </ul>
 
-<details>
-<summary>もっと見る</summary>
+<p class="more">もっと見る</p>
+</div>
+</summary>
 
 <div class="feature-expand">
 <div class="feature-grid">
@@ -55,10 +62,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </details>
 
-</div>
-
 <!-- STANDARD -->
+<details class="plan-wrap" open>
+
+<summary>
 <div class="plan recommended">
+
 <div class="badge">おすすめ</div>
 
 <h3>スタンダード</h3>
@@ -76,8 +85,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <li>緊急連絡先</li>
 </ul>
 
-<details open>
-<summary>もっと見る</summary>
+<p class="more">もっと見る</p>
+
+</div>
+</summary>
 
 <div class="feature-expand">
 <div class="feature-grid">
@@ -97,8 +108,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </div>
 
 </details>
-
-</div>
 
 </div>
 </section>
