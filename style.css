@@ -1,246 +1,205 @@
+/* RESET */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-font-family:'Inter',sans-serif;
-background:#f8fafc;
-color:#1e293b;
+  font-family:'Inter',sans-serif;
+  background:#0b1a2b;
+  color:#fff;
 }
 
-/* promo */
+/* PROMO */
 .promo{
-background:#1e3a5f;
-color:white;
-text-align:center;
-padding:12px;
-font-weight:600;
+  background:#4da3ff;
+  text-align:center;
+  padding:10px;
+  font-size:14px;
 }
 
-/* hero */
-.hero{
-text-align:center;
-padding:140px 20px;
-background:linear-gradient(135deg,#2b6cb0,#4fd1c5);
-color:white;
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-.hero button{
-margin-top:20px;
-padding:12px 28px;
-border:none;
-border-radius:999px;
-background:white;
-color:#1e3a5f;
-cursor:pointer;
-}
-
-/* sections */
+/* SECTIONS */
 section{
-padding:80px 20px;
-text-align:center;
+  padding:80px 20px;
+  text-align:center;
 }
 
 h2{
-margin-bottom:15px;
+  font-size:28px;
+  margin-bottom:10px;
 }
 
-/* product/value */
-.product,.options{
-background:white;
+/* HERO */
+.hero h1{
+  font-size:36px;
+  margin-bottom:10px;
 }
 
-.value{
-background:#f1f5f9;
+.hero p{
+  color:#ccc;
+  margin-bottom:20px;
 }
 
-/* options */
-.option-grid{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:20px;
+.hero button{
+  background:#4da3ff;
+  border:none;
+  padding:12px 24px;
+  border-radius:8px;
+  color:#fff;
+  cursor:pointer;
 }
 
-.option-card{
-width:300px;
-padding:25px;
-background:#f8fafc;
-border-radius:16px;
-border:1px solid #e2e8f0;
+/* PRODUCT + VALUE */
+.product p,
+.value p{
+  color:#ccc;
 }
 
-/* pricing */
+/* PRICING */
 .plans{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 
 .plan{
-width:300px;
-background:white;
-padding:25px;
-border-radius:16px;
-border:1px solid #e2e8f0;
-cursor:pointer;
-transition:.25s;
-}
-
-.plan:hover{
-transform:translateY(-5px);
+  background:#1a2a3f;
+  padding:25px;
+  border-radius:16px;
+  width:260px;
+  cursor:pointer;
+  transition:0.3s;
 }
 
 .plan.active{
-border:2px solid #2b6cb0;
+  border:2px solid #4da3ff;
 }
 
-.recommended{
-border:2px solid #2b6cb0;
-}
-
-.badge{
-background:#38bdf8;
-color:white;
-padding:5px 12px;
-border-radius:999px;
-font-size:12px;
-display:inline-block;
-margin-bottom:10px;
+.plan h1{
+  margin:10px 0;
 }
 
 .plan ul{
-list-style:none;
-line-height:1.8;
-color:#64748b;
+  list-style:none;
+  text-align:left;
+  margin:15px 0;
 }
 
-.more{
-margin-top:10px;
-color:#2b6cb0;
-font-weight:600;
+.plan li{
+  margin-bottom:5px;
+  font-size:14px;
 }
 
-/* features */
+.plan .more{
+  color:#4da3ff;
+  font-size:13px;
+}
+
+/* BADGE */
+.recommended{
+  position:relative;
+}
+
+.badge{
+  position:absolute;
+  top:-10px;
+  right:-10px;
+  background:#ffcc00;
+  color:#000;
+  padding:5px 10px;
+  border-radius:8px;
+  font-size:12px;
+}
+
+/* FEATURES */
 .features{
-display:none;
-background:#f1f5f9;
+  display:none;
 }
 
 .feature-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-max-width:1000px;
-margin:auto;
-margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:15px;
+  max-width:800px;
+  margin:20px auto;
 }
 
 .feature-card{
-background:white;
-padding:25px;
-border-radius:16px;
-border:1px solid #e2e8f0;
+  background:#1a2a3f;
+  padding:15px;
+  border-radius:10px;
 }
 
 .feature-card i{
-font-size:24px;
-color:#2b6cb0;
-margin-bottom:10px;
+  color:#4da3ff;
+  margin-bottom:5px;
 }
 
-/* contact */
-.contact input,
-.contact textarea{
-display:block;
-width:260px;
-margin:10px auto;
-padding:10px;
-border-radius:6px;
-border:1px solid #ccc;
-}
-
-.contact button{
-padding:10px 20px;
-border:none;
-background:#2b6cb0;
-color:white;
-border-radius:6px;
-}
-
-/* OPTIONS (dark section upgrade) */
-.options{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:100px 20px;
-}
-
-.options h2{
-font-size:28px;
-margin-bottom:10px;
-}
-
+/* OPTIONS */
 .options .sub{
-color:#cbd5f5;
-margin-bottom:40px;
-line-height:1.6;
+  color:#aaa;
+  margin-bottom:30px;
+  line-height:1.6;
 }
 
-.options .highlight{
-color:#38bdf8;
-font-weight:600;
+.highlight{
+  color:#4da3ff;
 }
 
-/* grid */
 .option-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
-max-width:1100px;
-margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:0 auto;
 }
 
-/* cards */
 .option-card{
-background:rgba(255,255,255,0.05);
-padding:30px 20px;
-border-radius:16px;
-border:1px solid rgba(255,255,255,0.08);
-transition:0.3s;
-backdrop-filter:blur(6px);
+  background:#1a2a3f;
+  padding:25px;
+  border-radius:14px;
+  transition:0.3s;
 }
 
-.option-card:hover{
-transform:translateY(-6px);
-border-color:#38bdf8;
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-/* icons */
 .option-card i{
-font-size:28px;
-margin-bottom:12px;
-color:#38bdf8;
-}
-
-/* text */
-.option-card h3{
-font-size:18px;
-margin-bottom:8px;
+  font-size:26px;
+  margin-bottom:10px;
+  color:#4da3ff;
 }
 
 .option-card p{
-font-size:14px;
-color:#cbd5e1;
-line-height:1.5;
+  font-size:13px;
+  color:#ccc;
+}
+
+.option-card:hover{
+  transform:translateY(-5px);
+  background:#223552;
+}
+
+/* CONTACT */
+.contact form{
+  max-width:400px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.contact input,
+.contact textarea{
+  padding:10px;
+  border:none;
+  border-radius:6px;
+}
+
+.contact button{
+  background:#4da3ff;
+  border:none;
+  padding:12px;
+  color:#fff;
+  border-radius:6px;
+  cursor:pointer;
 }
