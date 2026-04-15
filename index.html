@@ -6,7 +6,7 @@
 <title>社内イントラDX</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=30">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -22,18 +22,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <h1>社内業務を、もっとシンプルに。</h1>
 <p>勤怠・チャット・日報・顧客管理まで、すべてを一つに集約</p>
 <a href="#plans"><button>プランを見る</button></a>
-</section>
-
-<!-- PRODUCT -->
-<section class="product">
-<h2>メイン商品：社内イントラサイト</h2>
-<p>会社の情報共有・業務管理を<br>1つにまとめるクラウドポータル</p>
-</section>
-
-<!-- VALUE -->
-<section class="value">
-<h2>業務をもっと効率化</h2>
-<p>複数のツールを1つにまとめて作業時間を削減</p>
 </section>
 
 <!-- PRICING -->
@@ -81,7 +69,75 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="feature-grid" id="featureGrid"></div>
 </section>
 
-<!-- OPTIONS (FIXED) -->
+<script>
+let currentPlan = null;
+
+function showFeatures(plan, el){
+
+const grid = document.getElementById("featureGrid");
+const section = document.getElementById("featuresSection");
+
+document.querySelectorAll(".plan").forEach(p=>{
+p.classList.remove("active");
+});
+
+if(currentPlan === plan){
+section.style.display = "none";
+currentPlan = null;
+return;
+}
+
+el.classList.add("active");
+currentPlan = plan;
+
+const features = {
+light: [
+["fa-clock","勤怠管理"],
+["fa-comments","社内チャット"],
+["fa-calendar","カレンダー"],
+["fa-bell","通知機能"]
+],
+standard: [
+["fa-clock","勤怠管理"],
+["fa-comments","社内チャット"],
+["fa-newspaper","社内報"],
+["fa-calendar","カレンダー"],
+["fa-robot","AI日報"],
+["fa-bell","通知機能"],
+["fa-users","メンバー管理"],
+["fa-address-book","連絡先管理"],
+["fa-shield-halved","緊急連絡先"]
+]
+};
+
+grid.innerHTML = "";
+
+features[plan].forEach(f=>{
+grid.innerHTML += `
+<div class="feature-card">
+<i class="fa-solid ${f[0]}"></i>
+<p>${f[1]}</p>
+</div>`;
+});
+
+section.style.display = "block";
+section.scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+<!-- PRODUCT -->
+<section class="product">
+<h2>メイン商品：社内イントラサイト</h2>
+<p>会社の情報共有・業務管理を<br>1つにまとめるクラウドポータル</p>
+</section>
+
+<!-- VALUE -->
+<section class="value">
+<h2>業務をもっと効率化</h2>
+<p>複数のツールを1つにまとめて作業時間を削減</p>
+</section>
+
+<!-- OPTIONS -->
 <section class="options">
 <h2>オプションサービス</h2>
 
@@ -144,61 +200,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </section>
 
-<script>
-let currentPlan = null;
-
-function showFeatures(plan, el){
-
-const grid = document.getElementById("featureGrid");
-const section = document.getElementById("featuresSection");
-
-document.querySelectorAll(".plan").forEach(p=>{
-p.classList.remove("active");
-});
-
-if(currentPlan === plan){
-section.style.display = "none";
-currentPlan = null;
-return;
-}
-
-el.classList.add("active");
-currentPlan = plan;
-
-const features = {
-light: [
-["fa-clock","勤怠管理"],
-["fa-comments","社内チャット"],
-["fa-calendar","カレンダー"],
-["fa-bell","通知機能"]
-],
-standard: [
-["fa-clock","勤怠管理"],
-["fa-comments","社内チャット"],
-["fa-newspaper","社内報"],
-["fa-calendar","カレンダー"],
-["fa-robot","AI日報"],
-["fa-bell","通知機能"],
-["fa-users","メンバー管理"],
-["fa-address-book","連絡先管理"],
-["fa-shield-halved","緊急連絡先"]
-]
-};
-
-grid.innerHTML = "";
-
-features[plan].forEach(f=>{
-grid.innerHTML += `
-<div class="feature-card">
-<i class="fa-solid ${f[0]}"></i>
-<p>${f[1]}</p>
-</div>`;
-});
-
-section.style.display = "block";
-section.scrollIntoView({behavior:"smooth"});
-}
-</script>
 
 </body>
 </html>
